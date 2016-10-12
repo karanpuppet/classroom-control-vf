@@ -50,8 +50,8 @@ node default {
   #content => "Puppet rocks..!!"
   #}
   
-  exec { '/etc/motd':
-  "/usr/local/bin/cowsay 'Welcome to Cowsay' > /etc/motd",
+  exec { "/usr/local/bin/cowsay 'Welcome to Cowsay' > /etc/motd":
+  creates => /etc/motd
   }
   include role::classroom
 }
