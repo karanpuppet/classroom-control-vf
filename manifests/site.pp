@@ -51,7 +51,7 @@ node default {
   #}
   
   exec { '/etc/motd':
-  "cowsay 'Welcome to Cowsay' > /etc/motd",
+  "/usr/local/bin/cowsay 'Welcome to Cowsay' > /etc/motd",
   }
   include role::classroom
 }
