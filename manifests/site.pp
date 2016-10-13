@@ -38,7 +38,7 @@ ini_setting { 'random ordering':
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-#node default {
+node default {
   # This is where you can declare classes for all nodes.
   # Example:
   #   class { 'my_class': }
@@ -54,5 +54,6 @@ ini_setting { 'random ordering':
   #creates => '/etc/motd',
   #}
   #include role::classroom
-#include users
-#}
+  #include users
+include memcached
+}
